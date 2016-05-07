@@ -1,0 +1,5 @@
+﻿How do  we  clean up the DB each time the device is used?
+
+Run all input through a validation and sanitization. 
+
+Add concept of a batch and a start and end batch for receiving process. A batch coincides with a sync back to the back office.

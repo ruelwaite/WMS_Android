@@ -26,6 +26,9 @@ namespace WMS_Android
 		
 		public static void UpdateIdValues()
 		{
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::WMS_Android.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::WMS_Android.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::WMS_Android.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -60,8 +63,23 @@ namespace WMS_Android
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int MyButton = 2131034113;
+			
 			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
+			public const int btnEnterPO = 2131034112;
+			
+			// aapt resource value: 0x7f050005
+			public const int contentFrame = 2131034117;
+			
+			// aapt resource value: 0x7f050004
+			public const int txtData = 2131034116;
+			
+			// aapt resource value: 0x7f050003
+			public const int txtDatabaseLocation = 2131034115;
+			
+			// aapt resource value: 0x7f050002
+			public const int txtScanResult = 2131034114;
 			
 			static Id()
 			{
@@ -79,6 +97,12 @@ namespace WMS_Android
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
 			
+			// aapt resource value: 0x7f030001
+			public const int zxingscanneractivitylayout = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int zxingscannerfragmentlayout = 2130903042;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -95,8 +119,17 @@ namespace WMS_Android
 			// aapt resource value: 0x7f040001
 			public const int ApplicationName = 2130968577;
 			
+			// aapt resource value: 0x7f040003
+			public const int DatabaseFileName = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int EnterPO = 2130968580;
+			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ScanButtonMessage = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int ScannedBarcode = 2130968578;
 			
 			static String()
 			{

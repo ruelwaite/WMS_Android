@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">WMS_Android</string>
+  <string name="ScanButtonMessage">Scan!</string>
+  <string name="ApplicationName">Tortuga WMS</string>
+  <string name="ScannedBarcode">Scanned Barcode: </string>
+  <string name="DatabaseFileName">database.db3</string>
+  <string name="EnterPO">Enter PO</string>
 </resources>

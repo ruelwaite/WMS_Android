@@ -5,10 +5,14 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
+using SQLite;
+using WMS_Android.Classes.Model;
+using WMS_Android.Classes.Activities;
 
 namespace WMS_Android
 {
-    [Activity(Label = "WMS_Android", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity( MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         int count = 1;
@@ -17,14 +21,49 @@ namespace WMS_Android
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            SetTitle(Resource.String.ApplicationName);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            var intent = new Intent(this, typeof(EnterPOActivity));
+            StartActivity(intent);
+        }
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+        private void SetupDB()
+        {
+            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
+            var txtDBLocation = FindViewById<TextView>(Resource.Id.txtDatabaseLocation);
+            txtDBLocation.Text = dbPath;
+            var db = new SQLiteConnection(dbPath);
+            db.CreateTable<ReceivedStock>();
+            var testStock = new ReceivedStock { LotNumber="5/3/2016", PONumber="PO_12345", Quantity=30, SKU="SKU8888" };
+            db.Insert(testStock);
+            testStock = new ReceivedStock { LotNumber = "5/3/2016", PONumber = "PO_67890", Quantity = 25, SKU = "SKU8888" };
+            db.Insert(testStock);
+
+            var table = db.Table<ReceivedStock>();
+            var txtData = FindViewById<TextView>(Resource.Id.txtData);
+            foreach (var s in table)
+            {
+                txtData.Text += string.Format("{0} - {1}, {2}, {3}, {4}", s.Id.ToString(), s.PONumber, s.SKU, s.Quantity, s.LotNumber);
+            }
+        }
+
+        private void SetupScan()
+        {
+            var button = FindViewById<Button>(Resource.Id.MyButton);
+            var textBox = FindViewById<TextView>(Resource.Id.txtScanResult);
+
+            button.Click += async (sender, e) =>
+            {
+                ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
+
+                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+                var result = await scanner.Scan();
+
+                if (result != null)
+                    textBox.Text = this.Resources.GetString(Resource.String.ScannedBarcode) + result.Text;
+            };
         }
     }
 }
