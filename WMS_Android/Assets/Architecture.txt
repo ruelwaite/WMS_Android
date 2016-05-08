@@ -3,3 +3,44 @@
 Run all input through a validation and sanitization. 
 
 Add concept of a batch and a start and end batch for receiving process. A batch coincides with a sync back to the back office.
+
+Careful consideration must be made to allow the application to correctly restore its state in the event that an activity is restarted, especially if that activity depends on data from previous activities.
+
+It is extremely important for the application developer to analyze the requirements of each activity to determine which methods exposed by the activity lifecycle need to be implemented. Failure to do this can result in application instability, crashes, resource bloat, and possibly even underlying OS instability.
+		https://developer.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/
+
+Place back-end code into a separate library that can be used for unit testing 
+
+In OnPause we must Unregister external event handlers or notification handlers (i.e. those that are tied to a service). This must be done to prevent Activity memory leaks.
+Likewise, if the Activity has displayed any dialogs or alerts, they must be cleaned up with the .Dismiss() method
+if device is starved for resources it is best not to rely on OnStop getting called when preparing an Activity for destruction
+There are no general guidelines for what kind of logic should be implemented in OnRestart. This is because OnStart is always invoked regardless of whether the Activity is being created or being restarted, so any resources required by the Activity should be initialized in OnStart, rather than OnRestart.
+
+Ensure PO is non null when entering into DB
+
+****Configure Next screen flow so it can be changed... Maybe store everything in Bundles and pass those back and forth.
+    each screen knows the data it needs but not where it comes from.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

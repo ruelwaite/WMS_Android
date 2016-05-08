@@ -24,47 +24,36 @@ namespace WMS_Android
             SetContentView(Resource.Layout.Main);
             SetTitle(Resource.String.ApplicationName);
 
-            var intent = new Intent(this, typeof(EnterPOActivity));
-            StartActivity(intent);
+            var button = FindViewById<Button>(Resource.Id.btnEnterPO);
+
+            button.Click += (sender, e) =>
+           {
+               var intent = new Intent(this, typeof(EnterPOActivity));
+               StartActivity(intent);
+           };
+                
         }
 
         private void SetupDB()
         {
-            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
-            var txtDBLocation = FindViewById<TextView>(Resource.Id.txtDatabaseLocation);
-            txtDBLocation.Text = dbPath;
-            var db = new SQLiteConnection(dbPath);
-            db.CreateTable<ReceivedStock>();
-            var testStock = new ReceivedStock { LotNumber="5/3/2016", PONumber="PO_12345", Quantity=30, SKU="SKU8888" };
-            db.Insert(testStock);
-            testStock = new ReceivedStock { LotNumber = "5/3/2016", PONumber = "PO_67890", Quantity = 25, SKU = "SKU8888" };
-            db.Insert(testStock);
+            //var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
+            //var txtDBLocation = FindViewById<TextView>(Resource.Id.txtDatabaseLocation);
+            //txtDBLocation.Text = dbPath;
+            //var db = new SQLiteConnection(dbPath);
+            //db.CreateTable<ReceivedStock>();
+            //var testStock = new ReceivedStock { LotNumber="5/3/2016", PONumber="PO_12345", Quantity=30, SKU="SKU8888" };
+            //db.Insert(testStock);
+            //testStock = new ReceivedStock { LotNumber = "5/3/2016", PONumber = "PO_67890", Quantity = 25, SKU = "SKU8888" };
+            //db.Insert(testStock);
 
-            var table = db.Table<ReceivedStock>();
-            var txtData = FindViewById<TextView>(Resource.Id.txtData);
-            foreach (var s in table)
-            {
-                txtData.Text += string.Format("{0} - {1}, {2}, {3}, {4}", s.Id.ToString(), s.PONumber, s.SKU, s.Quantity, s.LotNumber);
-            }
+            //var table = db.Table<ReceivedStock>();
+            //var txtData = FindViewById<TextView>(Resource.Id.txtData);
+            //foreach (var s in table)
+            //{
+            //    txtData.Text += string.Format("{0} - {1}, {2}, {3}, {4}", s.Id.ToString(), s.PONumber, s.SKU, s.Quantity, s.LotNumber);
+            //}
         }
 
-        private void SetupScan()
-        {
-            var button = FindViewById<Button>(Resource.Id.MyButton);
-            var textBox = FindViewById<TextView>(Resource.Id.txtScanResult);
-
-            button.Click += async (sender, e) =>
-            {
-                ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
-
-                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-
-                var result = await scanner.Scan();
-
-                if (result != null)
-                    textBox.Text = this.Resources.GetString(Resource.String.ScannedBarcode) + result.Text;
-            };
-        }
     }
 }
 
