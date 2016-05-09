@@ -13,22 +13,20 @@ using Android.Widget;
 namespace WMS_Android.Classes.Activities
 {
     [Activity(Label = "EnterQuantityActivity")]
-    public class EnterQuantityActivity : Activity
+    public class EnterQuantityAndLotActivity : Activity
     {
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.EnterPOQuantity);
+            SetContentView(Resource.Layout.EnterSkuQuantity);
 
             var txtPONumber = FindViewById<TextView>(Resource.Id.txtPONumber);
-            var poNumber = Intent.GetStringExtra("PONumber");
+            var txtSkuNumber = FindViewById<TextView>(Resource.Id.txtSkuNumber);
 
-            if(poNumber != null)
-            {
-                txtPONumber.Text = poNumber;
-            }
+            txtPONumber.Text = Intent.GetStringExtra(Globals._poNumber);
+            txtSkuNumber.Text = Intent.GetStringExtra(Globals._skuNumber);
         }
     }
 }

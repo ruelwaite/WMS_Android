@@ -74,11 +74,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Activities\EnterSkuActivity.cs" />
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
-    <Compile Include="Classes\Activities\EnterQuantityActivity.cs" />
+    <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
+    <Compile Include="Classes\Globals.cs" />
     <Compile Include="Classes\Model\ReceivedStock.cs" />
     <Compile Include="Classes\SQLite.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Classes\Activities\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,7 +92,10 @@
     <AndroidResource Include="Resources\layout\EnterPO.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\EnterPOQuantity.axml">
+    <AndroidResource Include="Resources\layout\EnterSkuQuantity.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EnterSku.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

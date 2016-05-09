@@ -36,9 +36,9 @@ namespace WMS_Android.Classes.Activities
 
         private void StartNextScreen(EditText txtPONumber)
         {
-            var enterQuantityActivity = new Intent(this, typeof(EnterQuantityActivity));
-            enterQuantityActivity.PutExtra("PONumber", txtPONumber.Text);
-            StartActivity(enterQuantityActivity);
+            var enterSkuActivity = new Intent(this, typeof(EnterSkuActivity));
+            enterSkuActivity.PutExtra(Globals._poNumber, txtPONumber.Text);
+            StartActivity(enterSkuActivity);
         }
 
         protected override void OnSaveInstanceState(Bundle outState)
@@ -46,7 +46,7 @@ namespace WMS_Android.Classes.Activities
             base.OnSaveInstanceState(outState);
 
             var txtPONumber = FindViewById<EditText>(Resource.Id.txtPONumber);
-            outState.PutString("PONumber", txtPONumber.Text);
+            outState.PutString(Globals._poNumber, txtPONumber.Text);
         }
 
         private void SetupManualEntry(EditText txtPONumber)

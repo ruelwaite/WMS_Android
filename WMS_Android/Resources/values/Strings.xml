@@ -5,11 +5,17 @@
   <string name="ApplicationName">Tortuga WMS</string>
   <string name="ScannedBarcode">Scanned Barcode: </string>
   <string name="DatabaseFileName">database.db3</string>
-  <string name="EnterPO">Enter Purchase Order:</string>
-  <string name="DefaultPOText">PO Number:</string>
+  <string name="EnterPO">Enter Purchase Order</string>
+  <string name="EnterSku">Enter Sku</string>
+  <string name="EnterLotNumber">Enter Lot Number</string>
+  <string name="EnterLotNumberColon">Enter Lot Number:</string>
+  <string name="DefaultPOText">PO Number</string>
+  <string name="DefaultSkuText">Sku Number</string>
   <string name="PONumber">PO Number:</string>
+  <string name="SkuNumber">Sku Number:</string>
   <string name="Next">Next>></string>
   <string name="EnterQuantity">Enter Quantity</string>
   <string name="PONumberId">PONumber</string>
-
+  <string name="PlaceHolder">_________</string>
+  <string name="EnterQuantityColon">Enter Quantity:</string>
 </resources>

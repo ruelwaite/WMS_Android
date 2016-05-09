@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalPOInfo">
+            <TextView
+                android:text="@string/PONumber"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lblPONUmber"
+                android:enabled="false" />
+            <TextView
+                android:text="@string/PlaceHolder"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtPONumber"
+                android:enabled="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalSkuInfo">
+            <TextView
+                android:text="@string/SkuNumber"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lblSkuNUmber"
+                android:enabled="false" />
+            <TextView
+                android:text="@string/PlaceHolder"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtSkuNumber"
+                android:enabled="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:paddingTop="40dp">
+            <TextView
+                android:text="@string/EnterQuantityColon"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lblEnterQuantity" />
+            <EditText
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="61.5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/txtQuanity" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="@string/EnterLotNumberColon"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lblEnterLotNumber" />
+            <EditText
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="61.5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/txtEnterLotNumber" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:text="@string/Next"
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
