@@ -21,6 +21,16 @@ Ensure PO is non null when entering into DB
 ****Configure Next screen flow so it can be changed... Maybe store everything in Bundles and pass those back and forth.
     each screen knows the data it needs but not where it comes from.
 
+Validate non empty data
+
+select the  data  so user can edit
+
+***Ensure save only happens once. Disable the button after click
+
+***Add try catches to  ensure no uhandled exceptions
+
+***Ensure Quantity fields are numeric
+
 
 
 

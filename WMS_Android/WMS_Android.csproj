@@ -74,10 +74,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Activities\ConfirmReceivedActivity.cs" />
     <Compile Include="Classes\Activities\EnterSkuActivity.cs" />
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
     <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
     <Compile Include="Classes\Globals.cs" />
+    <Compile Include="Classes\gvItemAdapter.cs" />
     <Compile Include="Classes\Model\ReceivedStock.cs" />
     <Compile Include="Classes\SQLite.cs" />
     <Compile Include="Classes\Activities\MainActivity.cs" />
@@ -92,10 +94,16 @@
     <AndroidResource Include="Resources\layout\EnterPO.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\EnterSkuQuantity.axml">
+    <AndroidResource Include="Resources\layout\EnterQuantityAndLot.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EnterSku.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListStock.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ConfirmReceived.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

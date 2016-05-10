@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="PO"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtPO"
+            android:paddingLeft="3pt" />
+        <TextView
+            android:text="Sku"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtSku"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp" />
+        <TextView
+            android:text="Quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtQuantity"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp" />
+        <TextView
+            android:text="Lot"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtLot"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="PO1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtPO1"
+            android:paddingLeft="3pt"
+            android:textSize="25dip" />
+        <TextView
+            android:text="Sku1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtSku1"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp"
+            android:textSize="25dip" />
+        <TextView
+            android:text="Quantity1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtQuantity1"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp"
+            android:textSize="25dip" />
+        <TextView
+            android:text="Lot1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtLot1"
+            android:paddingLeft="3pt"
+            android:layout_marginLeft="4.0dp"
+            android:textSize="25dip" />
+    </LinearLayout>
+</LinearLayout>

@@ -89,7 +89,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="61.5dp"
                 android:layout_height="match_parent"
-                android:id="@+id/txtEnterLotNumber" />
+                android:id="@+id/txtLotNumber" />
         </LinearLayout>
     </LinearLayout>
     <Button
