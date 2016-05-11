@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SQLite;
+using System.IO;
 
 namespace WMS_Android.Classes
 {
@@ -16,6 +18,16 @@ namespace WMS_Android.Classes
     {
         public const string _poNumber = "PONumber";
         public const string _skuNumber = "SkuNumber";
+
+
+        public const string _dbName = "database.db3";
+
+        public static SQLiteConnection GetDB()
+        {
+            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), _dbName);
+            var db = new SQLiteConnection(dbPath);
+            return db;
+        }
 
     }
 }

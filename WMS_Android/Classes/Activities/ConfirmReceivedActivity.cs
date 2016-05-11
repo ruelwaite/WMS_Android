@@ -24,16 +24,28 @@ namespace WMS_Android.Classes.Activities
 
             SetContentView(Resource.Layout.ConfirmReceived);
 
+            SetupGrid();
+
+            var btnNextPO = FindViewById(Resource.Id.btnNextPO);
+            btnNextPO.Click += (sender, e) => {
+                var enterPOActivity = new Intent(this, typeof(EnterPOActivity));
+                StartActivity(enterPOActivity);
+            };
+
+        }
+
+        private void SetupGrid()
+        {
             var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
             var db = new SQLiteConnection(dbPath);
             var stock = db.Table<ReceivedStock>().ToList();
-
+            
             var gvObject = FindViewById<GridView>(Resource.Id.gvCtrl);
             gvObject.Adapter = new gvItemAdapter(this, stock);
 
-            gvObject.ItemClick += (sender, e) => {
+            gvObject.ItemClick += (sender, e) =>
+            {
                 string selectedName = e.View.FindViewById<TextView>(Resource.Id.txtPO1).Text;
-                Toast.MakeText(this, "You Click on name " + selectedName, ToastLength.Long).Show();
             };
         }
     }

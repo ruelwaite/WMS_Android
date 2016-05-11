@@ -18,4 +18,10 @@
   <string name="PONumberId">PONumber</string>
   <string name="PlaceHolder">_________</string>
   <string name="EnterQuantityColon">Enter Quantity:</string>
+  <string name="NextPOMessage">Next Purchase Order</string>
+  <string name="ExitMessage">Exit</string>
+  <string name="UsernameColon">Username:</string>
+  <string name="PasswordColon">Password:</string>
+  <string name="Login">Login</string>
+  <string name="IncorrectUserPassword">Incorrect Username or Password</string>
 </resources>
