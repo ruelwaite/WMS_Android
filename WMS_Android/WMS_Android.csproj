@@ -79,7 +79,9 @@
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
     <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
     <Compile Include="Classes\Globals.cs" />
-    <Compile Include="Classes\gvItemAdapter.cs" />
+    <Compile Include="Classes\PurchaseOrderAdapter.cs" />
+    <Compile Include="Classes\ReceivedStockAdapter.cs" />
+    <Compile Include="Classes\Model\PurchaseOrder.cs" />
     <Compile Include="Classes\Model\ReceivedStock.cs" />
     <Compile Include="Classes\Model\User.cs" />
     <Compile Include="Classes\SQLite.cs" />
@@ -109,6 +111,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListPurchaseOrder.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

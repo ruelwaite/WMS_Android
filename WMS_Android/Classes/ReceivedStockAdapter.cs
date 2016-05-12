@@ -13,13 +13,13 @@ using WMS_Android.Classes.Model;
 
 namespace WMS_Android.Classes
 {
-    public class gvItemAdapter : BaseAdapter<ReceivedStock>
+    public class ReceivedStockAdapter : BaseAdapter<ReceivedStock>
     {
 
         private List<ReceivedStock> _receivedStockItems { get; set; }
         private Activity _gridViewActivity { get; set; }
 
-        public gvItemAdapter(Activity gridViewActivity, List<ReceivedStock> receivedStockItems)
+        public ReceivedStockAdapter(Activity gridViewActivity, List<ReceivedStock> receivedStockItems)
         {
             _receivedStockItems = receivedStockItems;
             _gridViewActivity = gridViewActivity;

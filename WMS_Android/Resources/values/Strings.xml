@@ -24,4 +24,7 @@
   <string name="PasswordColon">Password:</string>
   <string name="Login">Login</string>
   <string name="IncorrectUserPassword">Incorrect Username or Password</string>
+  <string name="SelectPO">SelectPO</string>
+
+  
 </resources>

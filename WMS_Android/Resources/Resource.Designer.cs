@@ -66,17 +66,17 @@ namespace WMS_Android
 			// aapt resource value: 0x7f050006
 			public const int btnEnterManually = 2131034118;
 			
-			// aapt resource value: 0x7f05001f
-			public const int btnEnterPO = 2131034143;
+			// aapt resource value: 0x7f050024
+			public const int btnEnterPO = 2131034148;
 			
 			// aapt resource value: 0x7f050003
 			public const int btnExit = 2131034115;
 			
-			// aapt resource value: 0x7f05001e
-			public const int btnLogin = 2131034142;
+			// aapt resource value: 0x7f050023
+			public const int btnLogin = 2131034147;
 			
-			// aapt resource value: 0x7f050009
-			public const int btnNext = 2131034121;
+			// aapt resource value: 0x7f05000a
+			public const int btnNext = 2131034122;
 			
 			// aapt resource value: 0x7f050002
 			public const int btnNextPO = 2131034114;
@@ -84,38 +84,41 @@ namespace WMS_Android
 			// aapt resource value: 0x7f050007
 			public const int btnScan = 2131034119;
 			
-			// aapt resource value: 0x7f050022
-			public const int contentFrame = 2131034146;
-			
 			// aapt resource value: 0x7f050008
-			public const int frameLayout1 = 2131034120;
+			public const int btnSelectPO = 2131034120;
+			
+			// aapt resource value: 0x7f050027
+			public const int contentFrame = 2131034151;
+			
+			// aapt resource value: 0x7f050009
+			public const int frameLayout1 = 2131034121;
 			
 			// aapt resource value: 0x7f050000
 			public const int gvCtrl = 2131034112;
 			
-			// aapt resource value: 0x7f05000a
-			public const int horizontalPOInfo = 2131034122;
-			
-			// aapt resource value: 0x7f05000c
-			public const int horizontalSkuInfo = 2131034124;
-			
-			// aapt resource value: 0x7f050011
-			public const int lblEnterLotNumber = 2131034129;
-			
-			// aapt resource value: 0x7f05000f
-			public const int lblEnterQuantity = 2131034127;
-			
 			// aapt resource value: 0x7f05000b
-			public const int lblPONUmber = 2131034123;
-			
-			// aapt resource value: 0x7f05001b
-			public const int lblPassword = 2131034139;
+			public const int horizontalPOInfo = 2131034123;
 			
 			// aapt resource value: 0x7f05000d
-			public const int lblSkuNUmber = 2131034125;
+			public const int horizontalSkuInfo = 2131034125;
 			
-			// aapt resource value: 0x7f050019
-			public const int lblUsername = 2131034137;
+			// aapt resource value: 0x7f050012
+			public const int lblEnterLotNumber = 2131034130;
+			
+			// aapt resource value: 0x7f050010
+			public const int lblEnterQuantity = 2131034128;
+			
+			// aapt resource value: 0x7f05000c
+			public const int lblPONUmber = 2131034124;
+			
+			// aapt resource value: 0x7f050020
+			public const int lblPassword = 2131034144;
+			
+			// aapt resource value: 0x7f05000e
+			public const int lblSkuNUmber = 2131034126;
+			
+			// aapt resource value: 0x7f05001e
+			public const int lblUsername = 2131034142;
 			
 			// aapt resource value: 0x7f050001
 			public const int linearLayout1 = 2131034113;
@@ -123,50 +126,62 @@ namespace WMS_Android
 			// aapt resource value: 0x7f050005
 			public const int linearLayout2 = 2131034117;
 			
-			// aapt resource value: 0x7f050013
-			public const int linearLayout3 = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int linearLayout3 = 2131034132;
 			
-			// aapt resource value: 0x7f050021
-			public const int txtData = 2131034145;
+			// aapt resource value: 0x7f050026
+			public const int txtData = 2131034150;
+			
+			// aapt resource value: 0x7f050022
+			public const int txtLoginMessage = 2131034146;
 			
 			// aapt resource value: 0x7f05001d
-			public const int txtLoginMessage = 2131034141;
+			public const int txtLot1 = 2131034141;
 			
-			// aapt resource value: 0x7f050018
-			public const int txtLot1 = 2131034136;
+			// aapt resource value: 0x7f050013
+			public const int txtLotNumber = 2131034131;
 			
-			// aapt resource value: 0x7f050012
-			public const int txtLotNumber = 2131034130;
+			// aapt resource value: 0x7f050019
+			public const int txtOpenClosed = 2131034137;
 			
-			// aapt resource value: 0x7f050015
-			public const int txtPO1 = 2131034133;
+			// aapt resource value: 0x7f050016
+			public const int txtPO = 2131034134;
+			
+			// aapt resource value: 0x7f05001a
+			public const int txtPO1 = 2131034138;
 			
 			// aapt resource value: 0x7f050004
 			public const int txtPONumber = 2131034116;
 			
-			// aapt resource value: 0x7f05001c
-			public const int txtPassword = 2131034140;
+			// aapt resource value: 0x7f050021
+			public const int txtPassword = 2131034145;
 			
-			// aapt resource value: 0x7f050010
-			public const int txtQuanity = 2131034128;
+			// aapt resource value: 0x7f050011
+			public const int txtQuanity = 2131034129;
+			
+			// aapt resource value: 0x7f050018
+			public const int txtQuantity = 2131034136;
+			
+			// aapt resource value: 0x7f05001c
+			public const int txtQuantity1 = 2131034140;
+			
+			// aapt resource value: 0x7f050025
+			public const int txtScanResult = 2131034149;
+			
+			// aapt resource value: 0x7f05001b
+			public const int txtSku1 = 2131034139;
+			
+			// aapt resource value: 0x7f05000f
+			public const int txtSkuNumber = 2131034127;
+			
+			// aapt resource value: 0x7f05001f
+			public const int txtUsername = 2131034143;
 			
 			// aapt resource value: 0x7f050017
-			public const int txtQuantity1 = 2131034135;
+			public const int txtVendor = 2131034135;
 			
-			// aapt resource value: 0x7f050020
-			public const int txtScanResult = 2131034144;
-			
-			// aapt resource value: 0x7f050016
-			public const int txtSku1 = 2131034134;
-			
-			// aapt resource value: 0x7f05000e
-			public const int txtSkuNumber = 2131034126;
-			
-			// aapt resource value: 0x7f05001a
-			public const int txtUsername = 2131034138;
-			
-			// aapt resource value: 0x7f050014
-			public const int verticalPOInfo = 2131034132;
+			// aapt resource value: 0x7f050015
+			public const int verticalPOInfo = 2131034133;
 			
 			static Id()
 			{
@@ -194,19 +209,22 @@ namespace WMS_Android
 			public const int EnterSku = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ListStock = 2130903044;
+			public const int ListPurchaseOrder = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Login = 2130903045;
+			public const int ListStock = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Main = 2130903046;
+			public const int Login = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int zxingscanneractivitylayout = 2130903047;
+			public const int Main = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int zxingscannerfragmentlayout = 2130903048;
+			public const int zxingscanneractivitylayout = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int zxingscannerfragmentlayout = 2130903049;
 			
 			static Layout()
 			{
@@ -286,6 +304,9 @@ namespace WMS_Android
 			
 			// aapt resource value: 0x7f040003
 			public const int ScannedBarcode = 2130968579;
+			
+			// aapt resource value: 0x7f040018
+			public const int SelectPO = 2130968600;
 			
 			// aapt resource value: 0x7f04000c
 			public const int SkuNumber = 2130968588;

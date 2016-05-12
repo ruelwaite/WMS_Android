@@ -41,7 +41,7 @@ namespace WMS_Android.Classes.Activities
             var stock = db.Table<ReceivedStock>().ToList();
             
             var gvObject = FindViewById<GridView>(Resource.Id.gvCtrl);
-            gvObject.Adapter = new gvItemAdapter(this, stock);
+            gvObject.Adapter = new ReceivedStockAdapter(this, stock);
 
             gvObject.ItemClick += (sender, e) =>
             {

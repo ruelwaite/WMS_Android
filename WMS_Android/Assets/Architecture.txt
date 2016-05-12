@@ -31,6 +31,8 @@ select the  data  so user can edit
 
 ***Ensure Quantity fields are numeric
 
+***Check authentication on every screen
+
 
 
 

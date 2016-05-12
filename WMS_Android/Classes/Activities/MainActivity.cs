@@ -26,6 +26,7 @@ namespace WMS_Android
             SetupAdminUser();
             SetContentView(Resource.Layout.Main);
             SetTitle(Resource.String.ApplicationName);
+            LoadPurchaseOrders();
 
             var loginActivity = new Intent(this, typeof(LoginActivity));
             StartActivity(loginActivity);
@@ -33,6 +34,17 @@ namespace WMS_Android
                 
         }
 
+        private void LoadPurchaseOrders()
+        {
+            var db = Globals.GetDB();
+            db.CreateTable<PurchaseOrder>();
+
+            var users = db.DeleteAll<PurchaseOrder>();
+
+            db.Insert(new PurchaseOrder { IsOpen=true, PONumber="12345", Quantity = 20, Vendor = "Robert's Supplies" });
+            db.Insert(new PurchaseOrder { IsOpen = true, PONumber = "56789", Quantity = 20, Vendor = "John's Produce" });
+            db.Insert(new PurchaseOrder { IsOpen = true, PONumber = "78988", Quantity = 20, Vendor = "Greg's Goods" });
+        }
         private void SetupAdminUser()
         {
             var db = Globals.GetDB();

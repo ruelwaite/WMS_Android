@@ -87,7 +87,7 @@
                 android:id="@+id/lblEnterLotNumber" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="61.5dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/txtLotNumber" />
         </LinearLayout>

@@ -9,6 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.IO;
+using SQLite;
+using WMS_Android.Classes.Model;
 
 namespace WMS_Android.Classes.Activities
 {
@@ -26,11 +29,27 @@ namespace WMS_Android.Classes.Activities
 
             SetupScan(txtPONumber);
             SetupManualEntry(txtPONumber);
+            SetupSelectPO();
 
             var btnNext = FindViewById<Button>(Resource.Id.btnNext);
             btnNext.Click += (sender, e) =>
             {
                 StartNextScreen(txtPONumber);
+            };
+        }
+        private void SetupGrid()
+        {
+            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
+            var db = new SQLiteConnection(dbPath);
+            var purchaseOrders = db.Table<PurchaseOrder>().ToList();
+
+            var gvObject = FindViewById<GridView>(Resource.Id.gvCtrl);
+            gvObject.Adapter = new PurchaseOrderAdapter(this, purchaseOrders);
+
+            gvObject.ItemClick += (sender, e) =>
+            {
+                var txtPONumber = FindViewById<EditText>(Resource.Id.txtPONumber);
+                txtPONumber.Text = e.View.FindViewById<TextView>(Resource.Id.txtPO).Text;
             };
         }
 
@@ -47,6 +66,12 @@ namespace WMS_Android.Classes.Activities
 
             var txtPONumber = FindViewById<EditText>(Resource.Id.txtPONumber);
             outState.PutString(Globals._poNumber, txtPONumber.Text);
+        }
+
+        private void SetupSelectPO()
+        {
+            var btnSelectPO = FindViewById<Button>(Resource.Id.btnSelectPO);
+            btnSelectPO.Click += (sender, e) => { SetupGrid(); };
         }
 
         private void SetupManualEntry(EditText txtPONumber)

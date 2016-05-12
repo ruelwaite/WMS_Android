@@ -32,7 +32,7 @@ namespace WMS_Android.Classes.Activities
             var btnNext = FindViewById<Button>(Resource.Id.btnNext);
             btnNext.Click += (sender, e) =>
             {
-                StartNextScreen(txtSkuNumber, txtSkuNumber);
+                StartNextScreen(txtPONumber, txtSkuNumber);
             };
         }
 
