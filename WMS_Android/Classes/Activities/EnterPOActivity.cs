@@ -83,21 +83,8 @@ namespace WMS_Android.Classes.Activities
         private void SetupScan(EditText txtPONumber)
         {
             var btnScan = FindViewById<Button>(Resource.Id.btnScan);
+            Globals.SetupScanEvent(txtPONumber, btnScan, this);
 
-            btnScan.Click += async (sender, e) =>
-            {
-                ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
-
-                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-
-                var result = await scanner.Scan();
-
-                if (result != null) {
-                    txtPONumber.Text = result.Text;
-                    txtPONumber.Enabled = true;
-                }
-
-            };
         }
     }
 }

@@ -23,16 +23,20 @@ namespace WMS_Android.Classes.Activities
             SetContentView(Resource.Layout.EnterSku);
             SetTitle(Resource.String.EnterSku);
             var txtSkuNumber = FindViewById<EditText>(Resource.Id.txtSkuNumber);
-            var txtPONumber = FindViewById<TextView>(Resource.Id.txtPONumber);
+            var txtBinNumber = FindViewById<EditText>(Resource.Id.txtBinNumber);
+            var btnEnterSku = FindViewById<Button>(Resource.Id.btnEnterSku);
+            var btnEnterBin = FindViewById<Button>(Resource.Id.btnEnterBin);
 
             SetupScan(txtSkuNumber);
-            SetupManualEntry(txtSkuNumber);
-            ProcessPreviousInput(txtPONumber);
+            SetupManualEntry(txtSkuNumber, btnEnterSku);
+            SetupManualEntry(txtBinNumber, btnEnterBin);
+
+            ProcessPreviousInput(txtBinNumber);
 
             var btnNext = FindViewById<Button>(Resource.Id.btnNext);
             btnNext.Click += (sender, e) =>
             {
-                StartNextScreen(txtPONumber, txtSkuNumber);
+                StartNextScreen(txtBinNumber, txtSkuNumber);
             };
         }
 
@@ -46,12 +50,12 @@ namespace WMS_Android.Classes.Activities
             }
         }
 
-        private void StartNextScreen(TextView txtPONumber, EditText txtSkuNumber)
+        private void StartNextScreen(TextView txtBinNumber, EditText txtSkuNumber)
         {
-            var enterQuantityActivity = new Intent(this, typeof(EnterQuantityAndLotActivity));
-            enterQuantityActivity.PutExtra(Globals._poNumber, txtPONumber.Text);
-            enterQuantityActivity.PutExtra(Globals._skuNumber, txtSkuNumber.Text);
-            StartActivity(enterQuantityActivity);
+            //var enterQuantityActivity = new Intent(this, typeof(EnterQuantityAndLotActivity));
+            //enterQuantityActivity.PutExtra(Globals._poNumber, txtBinNumber.Text);
+            //enterQuantityActivity.PutExtra(Globals._skuNumber, txtSkuNumber.Text);
+            //StartActivity(enterQuantityActivity);
         }
 
         protected override void OnSaveInstanceState(Bundle outState)
@@ -62,30 +66,17 @@ namespace WMS_Android.Classes.Activities
             outState.PutString(Globals._poNumber, txtSkuNumber.Text);
         }
 
-        private void SetupManualEntry(EditText txtSkuNumber)
+        private void SetupManualEntry(EditText txtSkuNumber, Button button)
         {
-            var btnEnterManually = FindViewById<Button>(Resource.Id.btnEnterManually);
-            btnEnterManually.Click += (sender, e) => { txtSkuNumber.Enabled = true; txtSkuNumber.Text = string.Empty; };
+            button.Click += (sender, e) => { txtSkuNumber.Enabled = true; txtSkuNumber.Text = string.Empty; };
         }
 
         private void SetupScan(EditText txtSkuNumber)
         {
             var btnScan = FindViewById<Button>(Resource.Id.btnScan);
 
-            btnScan.Click += async (sender, e) =>
-            {
-                ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
-
-                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-
-                var result = await scanner.Scan();
-
-                if (result != null) {
-                    txtSkuNumber.Text = result.Text;
-                    txtSkuNumber.Enabled = true;
-                }
-
-            };
+            Globals.SetupScanEvent(txtSkuNumber, btnScan, this);
         }
+
     }
 }

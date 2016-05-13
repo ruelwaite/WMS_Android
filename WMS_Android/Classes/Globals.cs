@@ -28,6 +28,24 @@ namespace WMS_Android.Classes
             var db = new SQLiteConnection(dbPath);
             return db;
         }
+        public static void SetupScanEvent(EditText txtTarget, Button btnScan, Activity activity)
+        {
+            btnScan.Click += async (sender, e) =>
+            {
+                ZXing.Mobile.MobileBarcodeScanner.Initialize(activity.Application);
 
+                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+                var result = await scanner.Scan();
+
+                if (result != null)
+                {
+                    txtTarget.Text = result.Text;
+                    txtTarget.Enabled = true;
+                }
+
+            };
+        }
     }
+
 }

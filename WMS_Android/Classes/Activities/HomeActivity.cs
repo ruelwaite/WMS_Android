@@ -35,8 +35,8 @@ namespace WMS_Android.Activities
             var btnStock = FindViewById<Button>(Resource.Id.btnStock);
             btnStock.Click += (sender, e) =>
             {
-                var enterPOActivity = new Intent(this, typeof(EnterPOActivity));
-                StartActivity(enterPOActivity);
+                var enterStockActivity = new Intent(this, typeof(EnterStockActivity));
+                StartActivity(enterStockActivity);
             };
         }
     }

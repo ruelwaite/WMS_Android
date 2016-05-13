@@ -12,38 +12,79 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
-        <EditText
-            android:text="@string/DefaultPOText"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/txtPONumber"
-            android:enabled="false" />
-        <GridView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/gvCtrl" />
+            android:id="@+id/linearLayout2"
+            android:layout_marginTop="20px">
+            <Button
+                android:text="@string/EnterBinMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnEnterBin"
+                android:background="@drawable/roundedButton"
+                android:textSize="30px" />
+            <Button
+                android:text="@string/ScanBinMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnScanBin"
+                android:background="@drawable/roundedButton"
+                android:textSize="30px" />
+            <EditText
+                android:text="@string/DefaultBinText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/txtBinNumber"
+                android:enabled="false"
+                android:textSize="30px" />
+        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout2">
             <Button
-                android:text="@string/EnterManuallyMessage"
+                android:text="@string/EnterSku"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/btnEnterManually" />
+                android:id="@+id/btnEnterSku"
+                android:background="@drawable/roundedButton"
+                android:textSize="30px" />
             <Button
                 android:text="@string/ScanButtonMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/btnScan" />
-            <Button
-                android:text="@string/SelectPO"
-                android:layout_width="match_parent"
+                android:id="@+id/btnScanSku"
+                android:background="@drawable/roundedButton"
+                android:textSize="30px" />
+            <EditText
+                android:text="@string/DefaultSkuText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/btnSelectPO" />
+                android:id="@+id/txtSku"
+                android:enabled="false"
+                android:textSize="40px" />
+            <Button
+                android:text="@string/Add"
+                android:layout_width="80sp"
+                android:layout_height="50sp"
+                android:id="@+id/btnAdd"
+                android:background="@drawable/roundedButton"
+                android:textSize="40px" />
         </LinearLayout>
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8995F0"
+            android:padding="2dp"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"
+            android:id="@+id/gvCtrl"
+            android:layout_marginTop="50px" />
     </LinearLayout>
     <FrameLayout
         android:paddingTop="64dp"
@@ -56,6 +97,7 @@
             android:text="@string/Next"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btnNext" />
+            android:id="@+id/btnNext"
+            android:background="@drawable/roundedButton" />
     </FrameLayout>
 </LinearLayout>

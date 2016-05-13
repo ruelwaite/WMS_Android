@@ -75,12 +75,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Activities\ConfirmReceivedActivity.cs" />
+    <Compile Include="Classes\Activities\EnterStockActivity.cs" />
     <Compile Include="Classes\Activities\EnterSkuActivity.cs" />
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
     <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
     <Compile Include="Classes\Activities\HomeActivity.cs" />
     <Compile Include="Classes\Globals.cs" />
+    <Compile Include="Classes\Model\BinnedStock.cs" />
     <Compile Include="Classes\PurchaseOrderAdapter.cs" />
+    <Compile Include="Classes\BinnedStockAdapter.cs" />
     <Compile Include="Classes\ReceivedStockAdapter.cs" />
     <Compile Include="Classes\Model\PurchaseOrder.cs" />
     <Compile Include="Classes\Model\ReceivedStock.cs" />
@@ -120,6 +123,9 @@
     <AndroidResource Include="Resources\layout\EnterStock.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListBinnedStock.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Home.axml" />
@@ -137,6 +143,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Architecture.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\red_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\roundedButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\button_press.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ScratchBoard.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

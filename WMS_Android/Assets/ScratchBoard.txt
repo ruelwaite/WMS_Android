@@ -1,0 +1,2 @@
+﻿  <gradient android:startColor="#6274FC" android:centerColor="#4257FC" android:endColor="#001DFC" android:angle="90" />
+  <gradient android:startColor="#FF6800" android:centerColor="#FF8000" android:endColor="#FF9700" android:angle="90" />
