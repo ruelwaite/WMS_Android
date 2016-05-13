@@ -24,8 +24,6 @@ namespace WMS_Android
             base.OnCreate(bundle);
 
             SetupAdminUser();
-            SetContentView(Resource.Layout.Main);
-            SetTitle(Resource.String.ApplicationName);
             LoadPurchaseOrders();
 
             var loginActivity = new Intent(this, typeof(LoginActivity));

@@ -42,8 +42,8 @@ namespace WMS_Android.Activities
                     return;
                 }
 
-                var enterPOActivity = new Intent(this, typeof(EnterPOActivity));
-                StartActivity(enterPOActivity);
+                var homeActivity = new Intent(this, typeof(HomeActivity));
+                StartActivity(homeActivity);
             };
 
         }

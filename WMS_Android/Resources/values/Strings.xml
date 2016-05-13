@@ -24,7 +24,10 @@
   <string name="PasswordColon">Password:</string>
   <string name="Login">Login</string>
   <string name="IncorrectUserPassword">Incorrect Username or Password</string>
-  <string name="SelectPO">SelectPO</string>
+  <string name="SelectPO">Select PO!</string>
+  <string name="Receive">Receive</string>
+  <string name="Stock">Stock</string>
+  <string name="Ship">Ship</string>
+  <string name="NextSkuForPO">Next Sku For This PO</string>
 
-  
 </resources>

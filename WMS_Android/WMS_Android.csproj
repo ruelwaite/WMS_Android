@@ -78,6 +78,7 @@
     <Compile Include="Classes\Activities\EnterSkuActivity.cs" />
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
     <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
+    <Compile Include="Classes\Activities\HomeActivity.cs" />
     <Compile Include="Classes\Globals.cs" />
     <Compile Include="Classes\PurchaseOrderAdapter.cs" />
     <Compile Include="Classes\ReceivedStockAdapter.cs" />
@@ -116,9 +117,12 @@
     <AndroidResource Include="Resources\layout\ListPurchaseOrder.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\EnterStock.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Home.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml">

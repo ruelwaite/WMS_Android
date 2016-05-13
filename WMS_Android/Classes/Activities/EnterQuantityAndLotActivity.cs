@@ -37,21 +37,22 @@ namespace WMS_Android.Classes.Activities
             btnNext.Click += (sender, e) =>
             {
                 btnNext.Enabled = false;
-                SaveStock(txtPONumber, txtSkuNumber, txtLotNumber);
+                SaveStock(txtPONumber.Text, txtSkuNumber.Text, int.Parse(txtQuantity.Text), txtLotNumber.Text);
 
                 var confirmReceivedActivity = new Intent(this, typeof(ConfirmReceivedActivity));
+                confirmReceivedActivity.PutExtra(Globals._poNumber, txtPONumber.Text);
                 StartActivity(confirmReceivedActivity);
 
 
             };
         }
 
-        private void SaveStock(TextView txtPONumber, TextView txtSkuNumber, TextView txtLotNumber)
+        private void SaveStock(string txtPONumber, string txtSkuNumber, int txtQuantity, string txtLotNumber)
         {
             var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), this.Resources.GetString(Resource.String.DatabaseFileName));
             var db = new SQLiteConnection(dbPath);
             db.CreateTable<ReceivedStock>();
-            var stock = new ReceivedStock { LotNumber = txtLotNumber.Text, PONumber = txtPONumber.Text, Quantity = 30, SKU = txtSkuNumber.Text };
+            var stock = new ReceivedStock { LotNumber = txtLotNumber, PONumber = txtPONumber, Quantity = (int) txtQuantity, SKU = txtSkuNumber };
             db.Insert(stock);
         }
     }

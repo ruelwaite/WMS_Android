@@ -15,14 +15,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
         <Button
+            android:text="@string/NextSkuForPO"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnNextSkuForPO" />
+        <Button
             android:text="@string/NextPOMessage"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnNextPO" />
-        <Button
-            android:text="@string/ExitMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/btnExit" />
     </LinearLayout>
+    <Button
+        android:text="@string/ExitMessage"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:id="@+id/btnExit" />
 </LinearLayout>

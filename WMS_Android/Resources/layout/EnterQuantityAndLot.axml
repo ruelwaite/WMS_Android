@@ -68,6 +68,7 @@
                 android:id="@+id/lblEnterQuantity" />
             <EditText
                 android:textAppearance="?android:attr/textAppearanceLarge"
+                android:inputType="numberSigned"
                 android:layout_width="61.5dp"
                 android:layout_height="match_parent"
                 android:id="@+id/txtQuanity" />

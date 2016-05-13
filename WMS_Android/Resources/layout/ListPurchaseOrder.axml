@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:id="@+id/txtPO"
             android:paddingLeft="3pt"
-            android:textSize="10dip" />
+            android:textSize="15dip" />
         <TextView
             android:text="Vendor"
             android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
             android:id="@+id/txtVendor"
             android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="10dip" />
+            android:textSize="15dip" />
         <TextView
             android:text="Quantity"
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             android:id="@+id/txtQuantity"
             android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="10dip" />
+            android:textSize="15dip" />
         <TextView
             android:text="OpenClosed"
             android:layout_width="wrap_content"
@@ -38,6 +38,6 @@
             android:id="@+id/txtOpenClosed"
             android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="10dip" />
+            android:textSize="15dip" />
     </LinearLayout>
 </LinearLayout>
