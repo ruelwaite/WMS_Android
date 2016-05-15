@@ -16,7 +16,7 @@ using System.Linq;
 
 namespace WMS_Android.Activities
 {
-    [Activity(Label = "Login")]
+    [Activity(Label = "Home")]
     public class HomeActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -35,7 +35,7 @@ namespace WMS_Android.Activities
             var btnStock = FindViewById<Button>(Resource.Id.btnStock);
             btnStock.Click += (sender, e) =>
             {
-                var enterStockActivity = new Intent(this, typeof(EnterStockActivity));
+                var enterStockActivity = new Intent(this, typeof(EnterBinnedStockActivity));
                 StartActivity(enterStockActivity);
             };
         }

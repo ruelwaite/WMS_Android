@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="EnterBinMessage">Enter Bin</string>
+  <string name="EnterLotMessage">Enter Lot#</string>
   <string name="ScanBinMessage">Scan Bin</string>
   <string name="ScanButtonMessage">Scan!</string>
   <string name="ScanSku">Scan SKU</string>
+  <string name="ScanLotMessage">Scan Lot</string>
 
   <string name="EnterManuallyMessage">Enter Manually</string>
   <string name="ApplicationName">Tortuga WMS</string>
@@ -12,13 +14,14 @@
   <string name="EnterPO">Enter Purchase Order</string>
   <string name="EnterStock">Enter Stock</string>
   <string name="EnterSku">Enter Sku</string>
-  <string name="LotNumber">Lot Number</string>
-  <string name="EnterLotNumberColon">Enter Lot Number:</string>
-  <string name="DefaultPOText">PO Number</string>
-  <string name="DefaultBinText">Bin Number</string>
-  <string name="DefaultSkuText">Sku Number</string>
-  <string name="PONumber">PO Number:</string>
-  <string name="SkuNumber">Sku Number:</string>
+  <string name="LotNumber">Lot#</string>
+  <string name="EnterLotNumberColon">Enter Lot#:</string>
+  <string name="DefaultPOText">PO#</string>
+  <string name="DefaultBinText">Bin#</string>
+  <string name="DefaultLotText">Lot#</string>
+  <string name="DefaultSkuText">Sku#</string>
+  <string name="PONumber">PO#:</string>
+  <string name="SkuNumber">Sku#:</string>
   <string name="Next">Next>></string>
   <string name="Quantity">Quantity</string>
   <string name="PONumberId">PONumber</string>
@@ -36,5 +39,5 @@
   <string name="Ship">Ship</string>
   <string name="NextSkuForPO">Next Sku For This PO</string>
   <string name="Add">Add</string>
-
+  <string name="Finish">Finish</string>
 </resources>

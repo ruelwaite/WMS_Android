@@ -3,21 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2E2E2">
+    android:background="#E2E2E2"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
     <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/scrollView1"
         android:scrollbars="vertical">
-        <TableLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:stretchColumns="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout1">
             <GridView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="650px"
                 android:id="@+id/gvCtrl" />
             <LinearLayout
                 android:orientation="horizontal"
@@ -28,17 +33,18 @@
                 android:id="@+id/linearLayout1">
                 <Button
                     android:text="@string/NextSkuForPO"
-                    android:layout_width="202.5dp"
+                    android:layout_width="186.0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/btnNextSkuForPO"
                     android:background="@drawable/roundedButton"
                     android:textSize="30px" />
                 <Button
                     android:text="@string/NextPOMessage"
-                    android:layout_width="178.5dp"
+                    android:layout_width="179.0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/btnNextPO"
-                    android:background="@drawable/roundedButton" />
+                    android:background="@drawable/roundedButton"
+                    android:paddingLeft="15px" />
             </LinearLayout>
             <Button
                 android:text="@string/ExitMessage"
@@ -47,6 +53,6 @@
                 android:id="@+id/btnExit"
                 android:background="@drawable/roundedButton"
                 android:layout_marginTop="25px" />
-        </TableLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

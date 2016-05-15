@@ -30,18 +30,18 @@ namespace WMS_Android.Classes
             return position;
         }
 
-        public override View GetView(int position, View convertView, ViewGroup parent)
+        public override View GetView(int position, View row, ViewGroup parent)
         {
             var item = _binnedStockItems[position];
-            if (convertView == null)
-                convertView = _gridViewActivity.LayoutInflater.Inflate(Resource.Layout.ListBinnedStock, null);
+            if (row == null)
+                row = _gridViewActivity.LayoutInflater.Inflate(Resource.Layout.ListBinnedStock, null);
 
-            convertView.FindViewById<TextView>(Resource.Id.txtBinNumber).Text = item.BinNumber;
-            convertView.FindViewById<TextView>(Resource.Id.txtSku1).Text = item.SKU;
-            convertView.FindViewById<TextView>(Resource.Id.txtQuantity1).Text = item.Quantity.ToString();
-            convertView.FindViewById<TextView>(Resource.Id.txtLot1).Text = item.LotNumber;
+            row.FindViewById<TextView>(Resource.Id.txtBinNumber).Text = item.BinNumber;
+            row.FindViewById<TextView>(Resource.Id.txtSku1).Text = item.SKU;
+            row.FindViewById<TextView>(Resource.Id.txtQuantity1).Text = item.Quantity.ToString();
+            row.FindViewById<TextView>(Resource.Id.txtLot1).Text = item.LotNumber;
 
-            return convertView;
+            return row;
         }
 
         public override int Count

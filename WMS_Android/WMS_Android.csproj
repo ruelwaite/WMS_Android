@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Activities\ConfirmReceivedActivity.cs" />
-    <Compile Include="Classes\Activities\EnterStockActivity.cs" />
+    <Compile Include="Classes\Activities\EnterBinnedStockActivity.cs" />
     <Compile Include="Classes\Activities\EnterSkuActivity.cs" />
     <Compile Include="Classes\Activities\EnterPOActivity.cs" />
     <Compile Include="Classes\Activities\EnterQuantityAndLotActivity.cs" />
@@ -124,6 +124,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ListBinnedStock.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListStock_Row.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

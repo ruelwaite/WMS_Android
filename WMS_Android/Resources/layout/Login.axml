@@ -3,28 +3,37 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E2E2E2">
+    android:background="#E2E2E2"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
     <TextView
         android:text="@string/UsernameColon"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblUsername" />
+        android:id="@+id/lblUsername"
+        android:layout_marginTop="25px"
+        android:textColor="#000000" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtUsername" />
+        android:id="@+id/txtUsername"
+        android:background="@drawable/edit_text_style"
+        android:textColor="#000000" />
     <TextView
         android:text="@string/PasswordColon"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblPassword" />
+        android:id="@+id/lblPassword"
+        android:textColor="#000000" />
     <EditText
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtPassword" />
+        android:id="@+id/txtPassword"
+        android:background="@drawable/edit_text_style"
+        android:textColor="#000000" />
     <TextView
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge"

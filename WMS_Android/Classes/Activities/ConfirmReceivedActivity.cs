@@ -15,7 +15,7 @@ using WMS_Android.Classes.Model;
 
 namespace WMS_Android.Classes.Activities
 {
-    [Activity(Label = "ConfirmReceivedActivity")]
+    [Activity(Label = "Confirm Received")]
     public class ConfirmReceivedActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

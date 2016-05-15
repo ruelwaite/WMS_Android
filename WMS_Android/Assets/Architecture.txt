@@ -40,7 +40,11 @@ select the  data  so user can edit
   Using the placeholder ___________ in a text field you should ensure it is not inadvertently seen as a valid entry
 
 
+  Replace int.Parse with int.TryParse where appropriate
 
+  ****Add a Delete function in the Enter Stock in case of user error.
+
+  Replace all " [Activity(Label = "Confirm Received")]" with @string reference
 
 
 

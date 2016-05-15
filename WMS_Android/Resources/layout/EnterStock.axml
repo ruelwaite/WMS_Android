@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="#E2E2E2">
+    android:background="#E2E2E2"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -29,9 +31,35 @@
             <EditText
                 android:hint="@string/DefaultBinText"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="177.0dp"
+                android:layout_width="130.0dp"
                 android:layout_height="36.0dp"
                 android:id="@+id/txtBinNumber"
+                android:enabled="true"
+                android:textSize="30px"
+                android:background="@drawable/edit_text_style"
+                android:layout_marginLeft="10px"
+                android:textColorHint="#E2E2E2"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:layout_marginTop="20px">
+            <Button
+                android:text="@string/ScanLotMessage"
+                android:layout_width="62.5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnScanLot"
+                android:background="@drawable/roundedButton"
+                android:textSize="20px" />
+            <EditText
+                android:hint="@string/DefaultLotText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="132.0dp"
+                android:layout_height="36.0dp"
+                android:id="@+id/txtLotNumber"
                 android:enabled="true"
                 android:textSize="30px"
                 android:background="@drawable/edit_text_style"
@@ -55,7 +83,7 @@
             <EditText
                 android:hint="@string/DefaultSkuText"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="177.0dp"
+                android:layout_width="132.0dp"
                 android:layout_height="34.5dp"
                 android:id="@+id/txtSku"
                 android:enabled="true"
@@ -64,6 +92,19 @@
                 android:layout_marginLeft="10px"
                 android:textColor="#000000"
                 android:textColorHint="#E2E2E2" />
+            <EditText
+                android:hint="@string/Quantity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="75.0dp"
+                android:layout_height="34.5dp"
+                android:id="@+id/txtSkuQuantity"
+                android:enabled="true"
+                android:textSize="30px"
+                android:background="@drawable/edit_text_style"
+                android:layout_marginLeft="10px"
+                android:textColor="#000000"
+                android:textColorHint="#E2E2E2"
+                android:inputType="numberSigned" />
             <Button
                 android:text="@string/Add"
                 android:layout_width="62.5dp"
@@ -91,10 +132,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/frameLayout1">
         <Button
-            android:text="@string/Next"
+            android:text="@string/Finish"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btnNext"
+            android:id="@+id/btnFinish"
             android:background="@drawable/roundedButton" />
     </FrameLayout>
 </LinearLayout>

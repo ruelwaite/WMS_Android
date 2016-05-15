@@ -31,7 +31,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btnScan"
                 android:background="@drawable/roundedButton"
-                android:textSize="20px"
+                android:textSize="40px"
                 android:layout_marginRight="5px" />
             <Button
                 android:text="@string/SelectPO"
@@ -39,7 +39,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btnSelectPO"
                 android:background="@drawable/roundedButton"
-                android:textSize="20px"
+                android:textSize="40px"
                 android:layout_marginLeft="5px" />
         </LinearLayout>
         <EditText

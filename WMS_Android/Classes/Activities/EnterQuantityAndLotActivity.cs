@@ -15,7 +15,7 @@ using WMS_Android.Classes.Model;
 
 namespace WMS_Android.Classes.Activities
 {
-    [Activity(Label = "EnterQuantityActivity")]
+    [Activity(Label = "Enter Quantity/Activity")]
     public class EnterQuantityAndLotActivity : Activity
     {
 

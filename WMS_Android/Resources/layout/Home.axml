@@ -3,7 +3,9 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#E2E2E2">
+    android:background="#E2E2E2"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
     <Button
         android:id="@+id/btnReceive"
         android:text="@string/Receive"
