@@ -2,20 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#E2E2E2">
     <Button
         android:id="@+id/btnReceive"
         android:text="@string/Receive"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedButton"
+        android:layout_marginTop="25px" />
     <Button
         android:id="@+id/btnStock"
         android:text="@string/Stock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedButton"
+        android:layout_marginTop="25px" />
     <Button
         android:id="@+id/btnShip"
         android:text="@string/Ship"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedButton"
+        android:layout_marginTop="25px" />
 </LinearLayout>

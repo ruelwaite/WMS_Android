@@ -35,11 +35,11 @@ namespace WMS_Android.Classes.Activities
             var txtBinNumber = FindViewById<EditText>(Resource.Id.txtBinNumber);
             SetupScan(txtBinNumber, btnScanBin);
 
-            var btnEnterBin = FindViewById<Button>(Resource.Id.btnEnterBin);
-            SetupManualEntry(txtBinNumber, btnEnterBin);
+            //var btnEnterBin = FindViewById<Button>(Resource.Id.btnEnterBin);
+            //SetupManualEntry(txtBinNumber, btnEnterBin);
 
-            var btnEnterSku = FindViewById<Button>(Resource.Id.btnEnterSku);
-            SetupManualEntry(txtSkuNumber, btnEnterSku);
+            //var btnEnterSku = FindViewById<Button>(Resource.Id.btnEnterSku);
+            //SetupManualEntry(txtSkuNumber, btnEnterSku);
 
 
             var btnAdd = FindViewById<Button>(Resource.Id.btnAdd);

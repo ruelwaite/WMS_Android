@@ -23,20 +23,18 @@ namespace WMS_Android.Classes.Activities
             SetContentView(Resource.Layout.EnterSku);
             SetTitle(Resource.String.EnterSku);
             var txtSkuNumber = FindViewById<EditText>(Resource.Id.txtSkuNumber);
-            var txtBinNumber = FindViewById<EditText>(Resource.Id.txtBinNumber);
-            var btnEnterSku = FindViewById<Button>(Resource.Id.btnEnterSku);
-            var btnEnterBin = FindViewById<Button>(Resource.Id.btnEnterBin);
+            var txtPONumber = FindViewById<TextView>(Resource.Id.txtPONumber);
+            //var btnEnterSku = FindViewById<Button>(Resource.Id.btnEnterSku);
 
             SetupScan(txtSkuNumber);
-            SetupManualEntry(txtSkuNumber, btnEnterSku);
-            SetupManualEntry(txtBinNumber, btnEnterBin);
+            //SetupManualEntry(txtSkuNumber, btnEnterSku);
 
-            ProcessPreviousInput(txtBinNumber);
+            ProcessPreviousInput(txtPONumber);
 
             var btnNext = FindViewById<Button>(Resource.Id.btnNext);
             btnNext.Click += (sender, e) =>
             {
-                StartNextScreen(txtBinNumber, txtSkuNumber);
+                StartNextScreen(txtPONumber, txtSkuNumber);
             };
         }
 
@@ -50,12 +48,12 @@ namespace WMS_Android.Classes.Activities
             }
         }
 
-        private void StartNextScreen(TextView txtBinNumber, EditText txtSkuNumber)
+        private void StartNextScreen(TextView txtPONumber, EditText txtSkuNumber)
         {
-            //var enterQuantityActivity = new Intent(this, typeof(EnterQuantityAndLotActivity));
-            //enterQuantityActivity.PutExtra(Globals._poNumber, txtBinNumber.Text);
-            //enterQuantityActivity.PutExtra(Globals._skuNumber, txtSkuNumber.Text);
-            //StartActivity(enterQuantityActivity);
+            var enterQuantityActivity = new Intent(this, typeof(EnterQuantityAndLotActivity));
+            enterQuantityActivity.PutExtra(Globals._poNumber, txtPONumber.Text);
+            enterQuantityActivity.PutExtra(Globals._skuNumber, txtSkuNumber.Text);
+            StartActivity(enterQuantityActivity);
         }
 
         protected override void OnSaveInstanceState(Bundle outState)

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E2E2E2">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -13,16 +14,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/txtPO1"
-            android:paddingLeft="3pt"
-            android:textSize="25dip" />
+            android:textSize="25dip"
+            android:paddingRight="25px" />
         <TextView
             android:text="Sku1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/txtSku1"
-            android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="25dip" />
+            android:textSize="25dip"
+            android:paddingRight="25px" />
         <TextView
             android:text="Quantity1"
             android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
             android:id="@+id/txtQuantity1"
             android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="25dip" />
+            android:textSize="25dip"
+            android:paddingRight="25px" />
         <TextView
             android:text="Lot1"
             android:layout_width="wrap_content"
@@ -38,6 +40,7 @@
             android:id="@+id/txtLot1"
             android:paddingLeft="3pt"
             android:layout_marginLeft="4.0dp"
-            android:textSize="25dip" />
+            android:textSize="25dip"
+            android:paddingRight="25px" />
     </LinearLayout>
 </LinearLayout>

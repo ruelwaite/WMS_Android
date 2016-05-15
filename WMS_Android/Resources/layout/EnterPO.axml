@@ -4,21 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="#E2E2E2"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <EditText
-            android:text="@string/DefaultPOText"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/txtPONumber"
-            android:enabled="false" />
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="25px">
         <GridView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,21 +26,33 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout2">
             <Button
-                android:text="@string/EnterManuallyMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/btnEnterManually" />
-            <Button
                 android:text="@string/ScanButtonMessage"
-                android:layout_width="wrap_content"
+                android:layout_width="180.0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btnScan" />
+                android:id="@+id/btnScan"
+                android:background="@drawable/roundedButton"
+                android:textSize="20px"
+                android:layout_marginRight="5px" />
             <Button
                 android:text="@string/SelectPO"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/btnSelectPO" />
+                android:id="@+id/btnSelectPO"
+                android:background="@drawable/roundedButton"
+                android:textSize="20px"
+                android:layout_marginLeft="5px" />
         </LinearLayout>
+        <EditText
+            android:hint="@string/DefaultPOText"
+            android:id="@+id/txtPONumber"
+            android:enabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:textColor="#000000"
+            android:text=""
+            android:textColorHint="#E2E2E2"
+            android:layout_marginTop="25px" />
     </LinearLayout>
     <FrameLayout
         android:paddingTop="64dp"
@@ -56,6 +65,7 @@
             android:text="@string/Next"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btnNext" />
+            android:id="@+id/btnNext"
+            android:background="@drawable/roundedButton" />
     </FrameLayout>
 </LinearLayout>

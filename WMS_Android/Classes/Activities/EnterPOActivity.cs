@@ -28,7 +28,7 @@ namespace WMS_Android.Classes.Activities
             var txtPONumber = FindViewById<EditText>(Resource.Id.txtPONumber);
 
             SetupScan(txtPONumber);
-            SetupManualEntry(txtPONumber);
+            //SetupManualEntry(txtPONumber);
             SetupSelectPO();
 
             var btnNext = FindViewById<Button>(Resource.Id.btnNext);
@@ -74,11 +74,11 @@ namespace WMS_Android.Classes.Activities
             btnSelectPO.Click += (sender, e) => { SetupGrid(); };
         }
 
-        private void SetupManualEntry(EditText txtPONumber)
-        {
-            var btnEnterManually = FindViewById<Button>(Resource.Id.btnEnterManually);
-            btnEnterManually.Click += (sender, e) => { txtPONumber.Enabled = true; txtPONumber.Text = string.Empty; };
-        }
+        //private void SetupManualEntry(EditText txtPONumber)
+        //{
+        //    var btnEnterManually = FindViewById<Button>(Resource.Id.btnEnterManually);
+        //    btnEnterManually.Click += (sender, e) => { txtPONumber.Enabled = true; txtPONumber.Text = string.Empty; };
+        //}
 
         private void SetupScan(EditText txtPONumber)
         {

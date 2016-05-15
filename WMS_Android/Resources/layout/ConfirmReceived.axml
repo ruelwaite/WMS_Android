@@ -2,32 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gvCtrl" />
-    <LinearLayout
-        android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:background="#E2E2E2">
+    <ScrollView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <Button
-            android:text="@string/NextSkuForPO"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/btnNextSkuForPO" />
-        <Button
-            android:text="@string/NextPOMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/btnNextPO" />
-    </LinearLayout>
-    <Button
-        android:text="@string/ExitMessage"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:id="@+id/btnExit" />
+        android:id="@+id/scrollView1"
+        android:scrollbars="vertical">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1">
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gvCtrl" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout1">
+                <Button
+                    android:text="@string/NextSkuForPO"
+                    android:layout_width="202.5dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnNextSkuForPO"
+                    android:background="@drawable/roundedButton"
+                    android:textSize="30px" />
+                <Button
+                    android:text="@string/NextPOMessage"
+                    android:layout_width="178.5dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnNextPO"
+                    android:background="@drawable/roundedButton" />
+            </LinearLayout>
+            <Button
+                android:text="@string/ExitMessage"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:id="@+id/btnExit"
+                android:background="@drawable/roundedButton"
+                android:layout_marginTop="25px" />
+        </TableLayout>
+    </ScrollView>
 </LinearLayout>
