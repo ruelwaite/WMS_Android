@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using WMS_Android.Classes.Model;
+using Android.Graphics;
 
 namespace WMS_Android.Classes
 {
@@ -18,6 +19,8 @@ namespace WMS_Android.Classes
 
         private List<BinnedStock> _binnedStockItems { get; set; }
         private Activity _gridViewActivity { get; set; }
+
+
 
         public BinnedStockAdapter(Activity gridViewActivity, List<BinnedStock> binnedStockItems)
         {
@@ -36,13 +39,28 @@ namespace WMS_Android.Classes
             if (row == null)
                 row = _gridViewActivity.LayoutInflater.Inflate(Resource.Layout.ListBinnedStock, null);
 
-            row.FindViewById<TextView>(Resource.Id.txtBinNumber).Text = item.BinNumber;
-            row.FindViewById<TextView>(Resource.Id.txtSku1).Text = item.SKU;
+            Globals.SetAlternatingBackground(row, position);
+
+            var txtBinNumber = row.FindViewById<TextView>(Resource.Id.txtBinNumber);
+            txtBinNumber.Text = item.BinNumber;
+            Globals.SetAlternatingText(txtBinNumber, position);
+
+            var txtSku1 = row.FindViewById<TextView>(Resource.Id.txtSku1);
+            txtSku1.Text = item.SKU;
+            Globals.SetAlternatingText(txtSku1, position);
+
+            var txtQuantity1 = row.FindViewById<TextView>(Resource.Id.txtQuantity1);
             row.FindViewById<TextView>(Resource.Id.txtQuantity1).Text = item.Quantity.ToString();
+            Globals.SetAlternatingText(txtQuantity1, position);
+
+            var txtLot1 = row.FindViewById<TextView>(Resource.Id.txtLot1);
             row.FindViewById<TextView>(Resource.Id.txtLot1).Text = item.LotNumber;
+            Globals.SetAlternatingText(txtLot1, position);
 
             return row;
         }
+
+
 
         public override int Count
         {

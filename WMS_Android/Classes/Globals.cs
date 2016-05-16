@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 using System.IO;
+using Android.Graphics;
 
 namespace WMS_Android.Classes
 {
@@ -22,12 +23,31 @@ namespace WMS_Android.Classes
 
         public const string _dbName = "database.db3";
 
+        public static int[] _blueGrayAlternating = new int[] { 0xF2F2F2, 0x001DFC };
+        public static int[] _blackWhiteAlternating = new int[] { 0x000000, 0xFFFFFF };
+
+        public static void SetAlternatingBackground(View view, int position)
+        {
+            view.SetBackgroundColor(GetColorFromInteger(Globals._blueGrayAlternating[position % Globals._blueGrayAlternating.Length]));
+        }
+
+        public static void SetAlternatingText(TextView txtBox, int position)
+        {
+            txtBox.SetTextColor(GetColorFromInteger(Globals._blackWhiteAlternating[position % Globals._blackWhiteAlternating.Length]));
+        }
+
+        private static Color GetColorFromInteger(int color)
+        {
+            return Color.Rgb(Color.GetRedComponent(color), Color.GetGreenComponent(color), Color.GetBlueComponent(color));
+        }
+
         public static SQLiteConnection GetDB()
         {
-            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), _dbName);
+            var dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), _dbName);
             var db = new SQLiteConnection(dbPath);
             return db;
         }
+
         public static void SetupScanEvent(EditText txtTarget, Button btnScan, Activity activity)
         {
             btnScan.Click += async (sender, e) =>

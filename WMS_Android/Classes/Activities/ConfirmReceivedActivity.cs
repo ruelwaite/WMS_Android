@@ -12,6 +12,7 @@ using Android.Widget;
 using System.IO;
 using SQLite;
 using WMS_Android.Classes.Model;
+using WMS_Android.Activities;
 
 namespace WMS_Android.Classes.Activities
 {
@@ -30,6 +31,7 @@ namespace WMS_Android.Classes.Activities
 
             SetupNextSkuButton();
 
+            SetupExitButton();
         }
 
         private void SetupNextSkuButton()
@@ -42,6 +44,17 @@ namespace WMS_Android.Classes.Activities
                 PutPONumberIfExists(enterNextSkuActivity);
 
                 StartActivity(enterNextSkuActivity);
+            };
+        }
+
+
+        private void SetupExitButton()
+        {
+            var btnExit = FindViewById(Resource.Id.btnExit);
+            btnExit.Click += (sender, e) =>
+            {
+                var homeActivity = new Intent(this, typeof(HomeActivity));
+                StartActivity(homeActivity);
             };
         }
 
